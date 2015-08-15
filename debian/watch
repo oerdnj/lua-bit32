@@ -1,0 +1,5 @@
+# test this watch file using:
+# uscan --watchfile debian/watch --upstream-version 0.0.1 --package lua-bit32
+#
+version=3
+https://github.com/keplerproject/lua-compat-5.2/releases  .*archive/bitlib-([\d\.]*).tar.gz

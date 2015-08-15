@@ -1,0 +1,34 @@
+Source: lua-bit32
+Section: interpreters
+Priority: optional
+Maintainer: Enrico Tassi <gareuselesinge@debian.org>
+Build-Depends: debhelper (>= 9), dh-lua
+Standards-Version: 3.9.6
+Homepage: 
+Vcs-Git: git://git.debian.org/git/pkg-lua/lua-bit32.git
+Vcs-Browser: http://git.debian.org/?p=pkg-lua/lua-bit32.git
+
+Package: lua-bit32
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: ${lua:Provides}
+XB-Lua-Versions: ${lua:Versions}
+Description: Backport of the Lua 5.2 bit32 library to Lua 5.1
+ This package provides the bit32 library for Lua 5.1, a back
+ port of the bit32 library of Lua 5.2 and 5.3.  Such library
+ implements bitwise operations on 32 bit integers.
+
+Package: lua-bit32-dev
+Section: libdevel
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Architecture: any
+Depends: lua-bit32 (= ${binary:Version}), ${misc:Depends}
+Provides: ${lua:Provides}
+XB-Lua-Versions: ${lua:Versions}
+Description: Development files for the bit32 library for Lua 5.1
+ This package contains the development files of the bit32 library,
+ useful to create a statically linked binary (like a C application or a
+ standalone Lua interpreter).
